@@ -328,6 +328,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    # PRELOADED
     # init sot tracker #
     sot_tracker = SiamRPNvot()
     print("loading SOT from: ", args.models_root + 'SiamRPNVOT.model')

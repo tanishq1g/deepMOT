@@ -334,6 +334,7 @@ def main(args, sot_tracker, sst):
 if __name__ == '__main__':
     # init parameters #
     print("Loading parameters...")
+
     curr_path = realpath(dirname(__file__))
     parser = argparse.ArgumentParser(description='PyTorch MOT tracking')
 
@@ -373,6 +374,7 @@ if __name__ == '__main__':
     sst.load_state_dict(torch.load(args.models_root + 'DAN.pth'))
 
     if args.is_cuda:
+        # sends sot_tracker and sst to GPU
         sot_tracker.cuda()
         sst.cuda()
 
